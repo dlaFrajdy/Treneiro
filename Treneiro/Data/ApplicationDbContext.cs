@@ -12,5 +12,6 @@ namespace Treneiro.Data
             : base(options)
         {
         }
+        //dodać softdelete aouto i queryfilter
     }
 }
