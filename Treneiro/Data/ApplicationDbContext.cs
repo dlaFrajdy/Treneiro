@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Treneiro.Models;
 
 namespace Treneiro.Data
 {
@@ -47,7 +48,8 @@ namespace Treneiro.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            //modelBuilder.Entity<Model_Name>().HasQueryFilter(model => !model.Deleted); //example
+            modelBuilder.Entity<Customer>().HasQueryFilter(model => !model.Deleted);
+            modelBuilder.Entity<Muscle>().HasQueryFilter(model => !model.Deleted);
         }
     }
 }
